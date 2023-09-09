@@ -17,6 +17,30 @@ public class StudentStatistics
         String assignmentName = scanner.nextLine();
         
        
+        //assumig there are 30 students in the classroom
+        int[] marks = new int[30]; 
         
+        // Initializing the  variables for highest and lowest marks
+        int highest = marks[0];
+        int lowest = marks[0];
+
+        for (int i = 0; i < 30; i++) {
+            
+            int mark;
+        
+            do {
+                
+                System.out.print("Enter the student's " + (i+1) + " mark: ");
+                
+                mark = scanner.nextInt();
+
+                if (mark < 0 || mark > 30) {
+                    System.out.println("Invalid! Please assign the valid marks between 0 and 30");
+                } 
+                
+            } while (mark < 0 || mark > 30);
+            
+             marks[i] = mark;
+        }
     }
 }
