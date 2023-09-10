@@ -13,10 +13,12 @@ public class StudentStatistics
         Scanner sc=new Scanner(System.in);
 
         // let the user to enter the assignment name
-        System.out.print("Enter the Name of the Assignment: ");
+        System.out.println("Enter the Name of the Assignment: ");
+        
 
         // Read input from the user and store in a variable
         String assignmentName = scanner.nextLine();
+        System.out.println("Please enter the marks between 0 and 30:");
         
         int n=30;       
        
