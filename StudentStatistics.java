@@ -2,6 +2,7 @@ import java.util.*;
 /**
  * Program to compute statistics of 'students' marks in an assignment.
  * @author (Pradeep Mani Dixit)
+ * Student Id: 23875508
  * @version (6/09/2023)
  */
 public class StudentStatistics
@@ -71,5 +72,26 @@ public class StudentStatistics
         //display the highest and lowest marks
         System.out.println("Student's Highest Mark is: " + highest);
         System.out.println("Student's Lowest Mark is: " + lowest);
+        
+        // Calculate the mean of the numbers using for each loop as it is easy to loop in the array using for each loop
+        int sum = 0;
+        for (int mark : marks) {
+            sum += mark;
+        }
+         double mean = (double) sum / n;
+         
+        //Calculating the standard deviation of the numbers using for each loop
+        
+        double ss = 0;
+        for (int mark : marks) {
+            double dev = mark - mean;
+            ss += dev * dev;
+        }
+        double var = ss / n;
+        double stanDev = Math.sqrt(var);
+        
+        System.out.println("The Mean of the marks is:  " + mean);
+        System.out.println("The Standard Deviation of the marks is: " + stanDev);
+        
     }
 }
