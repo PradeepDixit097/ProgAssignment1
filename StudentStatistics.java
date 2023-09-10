@@ -84,12 +84,12 @@ public class StudentStatistics
          
         //Calculating the standard deviation of the numbers using for each loop
         
-        double ss = 0;
+        double squaredSum = 0;
         for (int mark : marks) {
             double dev = mark - mean;
-            ss += dev * dev;
+            squaredSum += dev * dev;
         }
-        double var = ss / n;
+        double var = squaredSum / n;
         double stanDev = Math.sqrt(var);
         
         System.out.println("The Mean of the marks is:  " + mean);
